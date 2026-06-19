@@ -35,7 +35,7 @@ const Loader: React.FC<LoaderProps> = ({ isLoading = true, onLoadComplete }) => 
       transition: {
         duration: 3,
         repeat: Infinity,
-        ease: 'linear',
+        ease: 'linear' as const,
       },
     },
   };
@@ -46,7 +46,7 @@ const Loader: React.FC<LoaderProps> = ({ isLoading = true, onLoadComplete }) => 
       transition: {
         duration: 4,
         repeat: Infinity,
-        ease: 'linear',
+        ease: 'linear' as const,
       },
     },
   };
@@ -58,7 +58,7 @@ const Loader: React.FC<LoaderProps> = ({ isLoading = true, onLoadComplete }) => 
       transition: {
         duration: 2,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: 'easeInOut' as const,
       },
     },
   };
@@ -70,7 +70,7 @@ const Loader: React.FC<LoaderProps> = ({ isLoading = true, onLoadComplete }) => 
       transition: {
         duration: 4,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: 'easeInOut' as const,
       },
     },
   };

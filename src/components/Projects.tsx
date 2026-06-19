@@ -12,7 +12,7 @@ interface ProjectProps {
   icon: React.ReactNode;
 }
 
-function ProjectCard({ title, description, image, tags, github, color, icon }: ProjectProps) {
+function ProjectCard({ title, description, tags, github, color, icon }: ProjectProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   

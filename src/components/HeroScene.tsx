@@ -1,7 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import React, { useRef, useEffect } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { PerspectiveCamera, OrbitControls, Environment, Points, PointMaterial } from '@react-three/drei';
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { useMotionValue } from 'framer-motion';
 import * as THREE from 'three';
 
 interface InteractiveMeshProps {
@@ -9,7 +9,7 @@ interface InteractiveMeshProps {
   mouseY: any;
 }
 
-const InteractiveMesh: React.FC<InteractiveMeshProps> = ({ mouseX, mouseY }) => {
+const InteractiveMesh: React.FC<InteractiveMeshProps> = () => {
   const torusRef = useRef<THREE.Mesh>(null);
   const outerGlowRef = useRef<THREE.Mesh>(null);
   const rotatingRingRef = useRef<THREE.Mesh>(null);
@@ -129,6 +129,7 @@ const ParticleSystem: React.FC = () => {
         count={100}
         array={colors}
         itemSize={3}
+        args={[colors, 3]}
       />
     </Points>
   );
