@@ -1,53 +1,147 @@
-# React + TypeScript + Vite
+# 3D Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive 3D portfolio website built with React, TypeScript, and Three.js. Features smooth animations, immersive 3D scenes, and a fully responsive design.
 
-Currently, two official plugins are available:
+## 🚀 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This is an advanced portfolio application showcasing professional work with:
+- **Interactive 3D graphics** powered by Three.js and React Three Fiber
+- **Smooth animations** using Framer Motion
+- **Modern UI** with Tailwind CSS and responsive design
+- **Multiple sections**: Hero, About, Skills, Experience, Projects, Resume, and Contact
+- **Immersive loading screen** with animation effects
+- **Special effects** including confetti animations
 
-## React Compiler
+## 🛠️ Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Core
+- **React** (19.2.6) - UI library
+- **TypeScript** (6.0.2) - Type-safe JavaScript
+- **Vite** (8.0.12) - Lightning-fast build tool
 
-## Expanding the ESLint configuration
+### 3D & Graphics
+- **Three.js** (0.184.0) - 3D graphics library
+- **React Three Fiber** (9.6.1) - React renderer for Three.js
+- **React Three Drei** (10.7.7) - Useful helpers for Three.js
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Styling & Animation
+- **Tailwind CSS** (3.4.19) - Utility-first CSS framework
+- **PostCSS** (8.5.15) - CSS transformation tool
+- **Autoprefixer** (10.5.0) - Vendor prefixes
+- **Framer Motion** (12.40.0) - Animation library
+- **Canvas Confetti** (1.9.4) - Confetti effects
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### UI Components
+- **Lucide React** (1.20.0) - Icon library
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Development
+- **ESLint** (10.3.0) - Code linting
+- **TypeScript ESLint** (8.59.2) - TypeScript linting
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Project Structure
+
+```
+src/
+├── components/           # React components
+│   ├── About.tsx
+│   ├── Contact.tsx
+│   ├── Experience.tsx
+│   ├── Hero.tsx
+│   ├── HeroScene.tsx    # 3D scene component
+│   ├── Loader.tsx
+│   ├── Navbar.tsx
+│   ├── Projects.tsx
+│   ├── Resume.tsx
+│   └── Skills.tsx
+├── App.tsx              # Main application component
+├── main.tsx             # Entry point
+├── App.css              # Global styles
+└── index.css            # Base styles
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd 3d-portfolio
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start the development server
+```bash
+npm run dev
+```
+
+The application will open at `http://localhost:5173` (or another available port).
+
+## 📝 Available Scripts
+
+- **`npm run dev`** - Start Vite development server with Hot Module Replacement (HMR)
+- **`npm run build`** - Build TypeScript and create optimized production build
+- **`npm run lint`** - Run ESLint to check code quality
+- **`npm run preview`** - Preview the production build locally
+
+## 🎨 Features
+
+### Sections
+- **Hero** - Eye-catching introduction with 3D graphics
+- **About** - Professional background and summary
+- **Skills** - Technical skills and expertise
+- **Experience** - Work history and achievements
+- **Projects** - Portfolio of completed projects
+- **Resume** - Downloadable resume
+- **Contact** - Contact information and forms
+
+### Design Elements
+- **Loading Screen** - Immersive animated loader
+- **Navigation** - Sticky navbar for easy navigation
+- **Animations** - Smooth transitions and motion effects
+- **Responsive Design** - Mobile-friendly layout
+- **Dark Theme** - Eye-friendly dark color scheme
+
+## 🔧 Configuration Files
+
+- **`vite.config.ts`** - Vite configuration
+- **`tsconfig.json`** - TypeScript configuration
+- **`tailwind.config.js`** - Tailwind CSS theme
+- **`eslint.config.js`** - ESLint rules
+- **`postcss.config.js`** - PostCSS configuration
+
+## 🚢 Deployment
+
+Build the project for production:
+```bash
+npm run build
+```
+
+The `dist/` folder contains the production-ready files. Deploy to your preferred hosting service (Vercel, Netlify, GitHub Pages, etc.)
+
+## 📦 Dependencies
+
+See `package.json` for the complete list of dependencies and their versions.
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to submit issues and enhancement requests.
+
+---
+
+**Built with ❤️ using React, TypeScript, and Three.js**
 import reactDom from 'eslint-plugin-react-dom'
 
 export default defineConfig([
